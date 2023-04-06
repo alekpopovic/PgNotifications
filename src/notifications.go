@@ -9,7 +9,7 @@ import (
 	"github.com/lib/pq"
 )
 
-func waitForNotification(l *pq.Listener) {
+func listenNotifications(l *pq.Listener) {
 	for {
 		select {
 		case n := <-l.Notify:
